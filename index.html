@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+            return decodeURIComponent(r[2]);
+
+        return null;
+    }
+
+    var str = navigator.userAgent;
+    if (!str.match(/(iPhone|iPad|iPod|iOS|Android)/i) && getQueryString("cid") != 1) {
+        window.location.href = 'http://www.baidu.com';
+    }
+</script>
+	
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>香蕉视频app下载</title>
 	<link rel="stylesheet" type="text/css" href="./微信下载引导_files/reset.css">
